@@ -10,7 +10,7 @@ declare var angular: any;
 
 export class CustomHandlingStrategy implements UrlHandlingStrategy {
   shouldProcessUrl(url) {
-    return url.toString().startsWith("/ng2-route") || url.toString() == "/"
+    return url.toString().startsWith("/angular") || url.toString() == "/"
   }
   extract(url) { return url; }
   merge(url, whole) { return url; }
@@ -33,16 +33,16 @@ angular.module('phonecatApp')
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'ng10-route'
+        redirectTo: 'angular'
       },
       {
-        path: 'ng10-route',
+        path: 'angular',
         component: Ng2DemoComponent
       }
     ],
     {
-      useHash: true,
-      enableTracing: true
+      // useHash: true,
+      // enableTracing: true
     }
     )
   ],

@@ -18,7 +18,7 @@ export class AppComponent {
 
   moveAngular10() {
     console.log()
-    this.router.navigateByUrl('');
+    this.router.navigate(['']);
 
   }
 }
