@@ -33,10 +33,10 @@ angular.module('phonecatApp')
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'ng2-route'
+        redirectTo: 'ng10-route'
       },
       {
-        path: 'ng2-route',
+        path: 'ng10-route',
         component: Ng2DemoComponent
       }
     ],
