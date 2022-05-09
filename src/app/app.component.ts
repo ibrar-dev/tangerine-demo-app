@@ -14,11 +14,4 @@ export class AppComponent {
     this.upgrade.bootstrap(document.body, ['phonecatApp']);
   }
   
-  title = 'ng10-ng-js';
-
-  moveAngular10() {
-    console.log()
-    this.router.navigate(['']);
-
-  }
 }

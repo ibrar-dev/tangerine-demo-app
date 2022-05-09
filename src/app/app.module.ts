@@ -1,11 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { UpgradeModule, downgradeComponent } from '@angular/upgrade/static';
-import { Ng2DemoComponent } from "./ng2-demo.component";
+import { NgDemoComponent } from "./ng2-demo.component";
 import { RouterModule, UrlHandlingStrategy } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { phoneServiceProvider } from './phone.service';
 declare var angular: any;
 
 export class CustomHandlingStrategy implements UrlHandlingStrategy {
@@ -19,12 +18,12 @@ export class CustomHandlingStrategy implements UrlHandlingStrategy {
 angular.module('phonecatApp')
   .directive(
     'ng2Demo',
-    downgradeComponent({component: Ng2DemoComponent})
+    downgradeComponent({component: NgDemoComponent})
   );
 @NgModule({
   declarations: [
     AppComponent,
-    Ng2DemoComponent
+    NgDemoComponent
   ],
   imports: [
     BrowserModule,
@@ -37,18 +36,17 @@ angular.module('phonecatApp')
       },
       {
         path: 'angular',
-        component: Ng2DemoComponent
+        component: NgDemoComponent
       }
     ],
     {
-      // useHash: true,
+      useHash: true,
       // enableTracing: true
     }
     )
   ],
   providers: [
     
-    phoneServiceProvider,
     { provide: UrlHandlingStrategy, useClass: CustomHandlingStrategy }
   ],
   bootstrap: [AppComponent]

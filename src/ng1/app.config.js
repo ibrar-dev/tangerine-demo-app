@@ -8,7 +8,7 @@ angular.
 
       $routeProvider.
         when('/js', {
-          template: '<phone-list></phone-list>'
+          template: '<js-component></js-component>'
         })
         .otherwise({template : ''});
     }

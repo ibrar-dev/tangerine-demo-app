@@ -6,8 +6,7 @@ import { Component, OnInit, Inject } from '@angular/core';
    Angular Home Page 
   `
 })
-export class Ng2DemoComponent implements OnInit {
-
+export class NgDemoComponent implements OnInit {
 
   constructor(
    ) {

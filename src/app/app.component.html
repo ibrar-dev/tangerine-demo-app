@@ -1,13 +1,18 @@
-<img width="150" src="../assets/tangerine-logo.png" />
-<br>
+<div class="centerApp">
+    <img width="150" src="../assets/tangerine-logo.png" />
+    <br>
+    <div class="btnContainer" >
+        <button routerLink="/angular"> Route to Angular</button> |
+            <button
+            routerLink="/js">Route to AngularJS
+        </button>
+    </div>
 
-<a routerLink="angular">angular</a> |
-
-<!-- <a (click)="moveAngular10()" >ng10-route</a> | -->
-<a href="#/js">Route to AngularJS</a>
-
-<!-- ng1 -->
-<!-- <div class="view-cophonesntainer"> -->
-    <div ng-view class="view-frame"></div>
-    <router-outlet></router-outlet>
-<!-- </div> -->
+    
+    
+    <!-- ng1 -->
+    <div class="view-cophonesntainer">
+        <div ng-view class="view-frame"></div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
